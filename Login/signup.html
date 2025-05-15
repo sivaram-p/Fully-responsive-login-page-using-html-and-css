@@ -12,8 +12,67 @@
           <li><a class="active"href="signup.html">SIGN UP</a></li>
         </ul>
       </nav>
-
-
+      <br>
+      <div class="container">
+        <div class="card">
+          <h2>Sign Up</h2>
+          <form action="#">
+            <div class="input-group">
+              <label for="userid">Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-group">
+              <label for="userid">Phone No:</label>
+              <input type="text" id="phone" name="phone" placeholder="Enter your Mobile No:" required>
+            </div>
+            <div class="input-group">
+              <label for="userid">Email</label>
+              <input type="text" id="email" name="email" placeholder="Enter your Email id" required>
+            </div>
+            <div class="input-group">
+              <label for="userid">User-ID</label>
+              <input type="text" id="userid" name="userid" placeholder="Enter a new User-id" required>
+            </div>
+            <div class="input-group">
+              <label for="userid">About</label>
+              <input type="text" id="userid" name="about" placeholder="Tell a short bio about yourself" required>
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+           <div class="input-group profile-upload">
+          <label for="profilepic">Profile Picture</label>
+          <label for="profilepic" class="avatar-preview">
+            <img id="avatar" src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="profilePic" />
+          </label>
+          <input type="file" id="profilepic" accept="image/*" hidden tabindex="-1"/>
+          <button type="button" id="removebtn">remove img</button>
+        </div>
+            <button type="submit">Sign Up</button>
+            <a href="login.html">already registered</a>
+         </form>
+        </div>
+       </div>
     </body>
-
+   <script>
+  const fileInput = document.getElementById('profilepic');
+  const avatarImg = document.getElementById('avatar');
+  const removebtn = document.getElementById('removebtn');
+  fileInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        avatarImg.src = e.target.result;  
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+    removebtn.addEventListener('click',() =>{
+      fileInput.value='';
+      avatarImg.src='https://cdn-icons-png.flaticon.com/512/747/747376.png';
+    
+  });
+</script>
 </html>
