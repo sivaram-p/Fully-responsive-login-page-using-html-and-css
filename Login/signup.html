@@ -18,15 +18,15 @@
           <h2>Sign Up</h2>
           <form action="#">
             <div class="input-group">
-              <label for="userid">Full Name</label>
+              <label for="fullname">Full Name</label>
               <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
             </div>
             <div class="input-group">
-              <label for="userid">Phone No:</label>
+              <label for="phone">Phone No:</label>
               <input type="text" id="phone" name="phone" placeholder="Enter your Mobile No:" required>
             </div>
             <div class="input-group">
-              <label for="userid">Email</label>
+              <label for="email">Email</label>
               <input type="text" id="email" name="email" placeholder="Enter your Email id" required>
             </div>
             <div class="input-group">
@@ -34,8 +34,8 @@
               <input type="text" id="userid" name="userid" placeholder="Enter a new User-id" required>
             </div>
             <div class="input-group">
-              <label for="userid">About</label>
-              <input type="text" id="userid" name="about" placeholder="Tell a short bio about yourself" required>
+              <label for="about">About</label>
+              <input type="text" id="about" name="about" placeholder="Tell a short bio about yourself" >
             </div>
             <div class="input-group">
               <label for="password">Password</label>
@@ -64,12 +64,12 @@
     if (file) {
       const reader = new FileReader();
       reader.onload = function(e) {
-        avatarImg.src = e.target.result;  
+      avatarImg.src = e.target.result;  
       };
       reader.readAsDataURL(file);
     }
   });
-    removebtn.addEventListener('click',() =>{
+    removebtn.addEventListener('click',function(){
       fileInput.value='';
       avatarImg.src='https://cdn-icons-png.flaticon.com/512/747/747376.png';
     
