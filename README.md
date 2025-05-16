@@ -2,7 +2,7 @@
 In this repository I'm creating a basic login page using html and css with some minor js. This will further be used as a part of full stack web development repositories
 
 
-# 1.html
+# 1.HTML
 There are two pages login page and sign up page where the user is directed to login if he has some credentials and directed to sign up page if he doesn't
   # 1-LOGIN
   The login collects the data like userid, password and sbmits to the browser for the backend to acess it each userid and password has its own id for the easy usage of them in js and , m  
