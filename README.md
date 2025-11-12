@@ -20,13 +20,13 @@ This holds the css lines that make styling for the html document
 # 3.JS
 It has not much purpose considering the current state but will be super useful when going to the future stages of this project.In current state js is used to achieve a preview of the profile picture in the signup page which is a case we discussed above in order to achieve this we initialise the icon of profile image with a custom stock-image link when the user inputs the image file js changes the source of the link that had been displaying to the new input file link. This way a preview of input is obtained then for remove img button js changes link back to stock-image link. 
 
-# SUMMARY
+# FILES & ATTRIBUTES
 
-  # 🧱 login.html
+  #  login.html
   Collects user ID/email + password.
   Form is prepped for backend hookup.  
   Has link to sign up if the user doesn’t have an account.
-  # 🧾 signup.html
+  #  signup.html
   Form fields:
   Full name
   Mobile
@@ -36,16 +36,16 @@ It has not much purpose considering the current state but will be super useful w
   Profile pic upload
   Profile image shows preview after selection.
   "Remove Image" button resets to default avatar.
-  # 🎨 style.css
+  #  style.css
   Uses flexbox, some responsive tweaks.
   Centered forms in a card-like UI.
   Avatar styled as a round image.
   Clean layout, no libraries used.
-  # ⚙️ JS (inline or external)
+  #  JS (inline or external)
   Image preview via FileReader.
   Reset preview via remove button.
   JS IDs are used to target inputs and image.
-# ⚡ To Do (Eventually)
+# To Do (Eventually)
   Add real backend.
   Form validation.
   Field error handling.
