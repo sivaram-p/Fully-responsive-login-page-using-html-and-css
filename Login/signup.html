@@ -47,8 +47,9 @@
             <img id="avatar" src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="profilePic" />
           </label>
           <input type="file" id="profilepic" accept="image/*" hidden tabindex="-1"/>
-               <button type="button" id="select-upload">Select image</button>
-               <button><input type="file" id="profilepic" accept="image/*" hidden tabindex="-1"/></button>
+               
+          <button type="button" id="select-upload">Select image</button>
+               <br>
           <button type="button" id="removebtn">remove image</button>
         </div>
             <button type="submit">Sign Up</button>
@@ -73,7 +74,7 @@
     }
   });
     selectbtn.addEventListener('click', function() {
-        document.getElementById('profilepic-input').click();
+        fileInput.click();
 });
     removebtn.addEventListener('click',function(){
       fileInput.value='';
