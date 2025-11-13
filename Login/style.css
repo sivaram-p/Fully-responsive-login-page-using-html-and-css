@@ -101,8 +101,6 @@ nav li a:hover::after {
     color: black;
 }
 button {
-  display:flex;
-  gap:10px;
   width: 50%;
   padding: 12px;
   margin-left: 15px;
