@@ -47,7 +47,9 @@
             <img id="avatar" src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="profilePic" />
           </label>
           <input type="file" id="profilepic" accept="image/*" hidden tabindex="-1"/>
-          <button type="button" id="removebtn">remove img</button>
+               <button type="button" id="select-upload">Select image</button>
+               <button><input type="file" id="profilepic" accept="image/*" hidden tabindex="-1"/></button>
+          <button type="button" id="removebtn">remove image</button>
         </div>
             <button type="submit">Sign Up</button>
             <a href="../index.html">already registered</a>
@@ -59,7 +61,8 @@
   const fileInput = document.getElementById('profilepic');
   const avatarImg = document.getElementById('avatar');
   const removebtn = document.getElementById('removebtn');
-  fileInput.addEventListener('change', function(event) {
+  const selectbtn = document.getElementById('select-upload');
+    fileInput.addEventListener('change', function(event) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -69,10 +72,12 @@
       reader.readAsDataURL(file);
     }
   });
+    selectbtn.addEventListener('click', function() {
+        document.getElementById('profilepic-input').click();
+});
     removebtn.addEventListener('click',function(){
       fileInput.value='';
       avatarImg.src='https://cdn-icons-png.flaticon.com/512/747/747376.png';
-    
   });
 </script>
 </html>
